@@ -1,4 +1,7 @@
 #!/bin/bash
 
-ln -s kitty.conf ~/.config/kitty
-ln -s ./polybar ~/.config
+ln -s "$PWD/kitty.conf" ~/.config/kitty
+
+mkdir ~/.config/polybar
+ln -s "$PWD/polybar/config.ini" ~/.config/polybar
+ln -s "$PWD/polybar/launch.sh"  ~/.config/polybar
