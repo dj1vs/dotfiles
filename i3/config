@@ -215,6 +215,3 @@ bindsym $mod+period exec --no-startup-id "/home/dmitriy/Applications/efck-chat-k
 
 for_window [class="qalculate-qt" instance="qalculate-qt"] floating enable
 for_window [class="spectacle" instance="spectacle"] floating enable
-
-for_window [class="minesweepersfml" instance="minesweepersfml"] floating enable
-
