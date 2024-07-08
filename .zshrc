@@ -11,8 +11,10 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #
+#
 # Setup bindings for both smkx and rmkx key variants
 # (fixes key issues in kitty terminal)
+#
 #
 
 # Home
@@ -22,11 +24,11 @@ bindkey '\eOH'  beginning-of-line
 bindkey '\e[F'  end-of-line
 bindkey '\eOF'  end-of-line
 # Up
-bindkey '\e[A' up-line-or-beginning-search
-bindkey '\eOA' up-line-or-beginning-search
+#bindkey '\e[A' up-line-or-beginning-search
+#bindkey '\eOA' up-line-or-beginning-search
 # Down
-bindkey '\e[B' down-line-or-beginning-search
-bindkey '\eOB' down-line-or-beginning-search
+#bindkey '\e[B' down-line-or-beginning-search
+#bindkey '\eOB' down-line-or-beginning-search
 # Left
 bindkey '\e[D' backward-char
 bindkey '\eOD' backward-char

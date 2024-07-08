@@ -3,6 +3,7 @@
 ln -s "$PWD/kitty.conf" ~/.config/kitty
 
 ln -s "$PWD/.zshrc" ~
+ln -s "$PWD/.p10k.zsh" ~
 
 mkdir ~/.config/polybar
 ln -s "$PWD/polybar/config.ini" ~/.config/polybar

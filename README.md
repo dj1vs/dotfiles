@@ -1,5 +1,7 @@
 # dotfiles
-My main linux machine configuration.
+Minimal configuration for my main linux machine.
+
+![](assets/screenshot.png)
 
 Contents:
 - i3
