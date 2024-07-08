@@ -1,4 +1,4 @@
-set $mod Mod4
+set $mod Mod4 # windows key as mod
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -143,7 +143,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
+#
+# Resize window (you can also use the mouse for that)
+#
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -170,28 +172,36 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Setup layout
+#
+# Commands to exec at start
+#
+# setup keyboard layout & layout switch on shift+alt
 exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_shift_toggle"
-
+# start polybar
 exec_always --no-startup-id /home/dmitriy/.config/polybar/launch.sh &
-
+# show background
 exec_always --no-startup-id feh --bg-max /home/dmitriy/Pictures/amiga-os-wallpapers/AsciiRules2.jpg
 
-# exec_always --no-startup-id qbittorrent &
-
+#
+# Setup windows borders
+# 
 default_border pixel 1
 default_floating_border none
-
 client.focused          #4c7899 #285577 #ffffff #88c0d0 #88c0d0
-
 gaps inner 10
 gaps outer 10
 
-for_window [class="yad"] floating enable
-for_window [class="Yad"] floating enable
-
+#
+# Setup shortcuts for screenshots taking
+#
 bindsym Print exec --no-startup-id spectacle
 bindsym $mod+Shift+Print exec --no-startup-id spectacle -r
+
+
+#
+# Setup shortcuts to manage machine power/logout/etc
+# (power off, reboot, logout, ...)
+#
 
 set $Locker i3lock && sleep 1
 
@@ -211,7 +221,17 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 
+#
+# Configure emoji input shortcut
+#
+
 bindsym $mod+period exec --no-startup-id "/home/dmitriy/Applications/efck-chat-keyboard/efck-chat-keyboard"
 
+#
+# Setup floating windows
+#
+
+for_window [class="yad"] floating enable
+for_window [class="Yad"] floating enable
 for_window [class="qalculate-qt" instance="qalculate-qt"] floating enable
 for_window [class="spectacle" instance="spectacle"] floating enable
