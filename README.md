@@ -8,5 +8,6 @@ Contents:
 - polybar
 - kitty
 - zsh
+- powerlevel10k
 
 Kitty terminal uses MesloLGL Nerd Font

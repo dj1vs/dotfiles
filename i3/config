@@ -238,10 +238,21 @@ bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+period exec --no-startup-id "/home/dmitriy/Applications/efck-chat-keyboard/efck-chat-keyboard"
 
 #
+#
 # Setup floating windows
+#
 #
 
 for_window [class="yad"] floating enable
 for_window [class="Yad"] floating enable
 for_window [class="qalculate-qt" instance="qalculate-qt"] floating enable
 for_window [class="spectacle" instance="spectacle"] floating enable
+for_window [class="LispDebugEmulator"] floating enable
+
+#
+#
+# Polkit setup
+#
+#
+
+exec --no-startup-id /usr/lib/polkit-kde/polkit-kde-authentication-agent-1 
