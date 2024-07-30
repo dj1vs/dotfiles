@@ -1,9 +1,12 @@
+# set default browser
+set $browser firefox
+
 # windows key as mod
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font MesloLGL:monospace 8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -43,7 +46,7 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 # start a browser
-bindsym $mod+b exec --no-startup-id brave
+bindsym $mod+b exec --no-startup-id $browser
 
 # kill focused window
 bindsym $mod+Shift+q kill
