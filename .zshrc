@@ -49,3 +49,6 @@ bindkey '\e[1;5D' backward-word
 bindkey '\e[1;5C' forward-word
 # Shift+Tab
 bindkey '\e[Z' reverse-menu-complete
+
+export TERMINAL=kitty
+export PATH="$HOME/.cargo/bin:$PATH"
