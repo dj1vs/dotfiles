@@ -1,5 +1,5 @@
 # set default applications
-set $browser firefox
+set $browser brave
 set $terminal kitty
 
 # windows key as mod
